@@ -1,70 +1,20 @@
-absl-py==0.13.0
-altair==4.1.0
-anyio @ file:///tmp/build/80754af9/anyio_1617783275907/work/dist
-app==0.0.1
-appdirs==1.4.4
-argon2-cffi @ file:///tmp/build/80754af9/argon2-cffi_1613037097816/work
-asgiref==3.4.1
-astor==0.8.1
-astunparse==1.6.3
-async-generator @ file:///home/ktietz/src/ci/async_generator_1611927993394/work
-attrs @ file:///tmp/build/80754af9/attrs_1620827162558/work
-Babel @ file:///tmp/build/80754af9/babel_1620871417480/work
-backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
-backports.functools-lru-cache @ file:///tmp/build/80754af9/backports.functools_lru_cache_1618170165463/work
-backports.tempfile @ file:///home/linux1/recipes/ci/backports.tempfile_1610991236607/work
-backports.weakref==1.0.post1
-base58==2.1.0
-bcrypt==3.2.0
-beautifulsoup4 @ file:///home/linux1/recipes/ci/beautifulsoup4_1610988766420/work
-bleach @ file:///tmp/build/80754af9/bleach_1612211392645/work
-blinker==1.4
-blis==0.7.4
-brotlipy==0.7.0
-cachetools==4.2.2
-catalogue==2.0.4
 certifi==2021.5.30
-cffi @ file:///tmp/build/80754af9/cffi_1613246945912/work
-chardet @ file:///tmp/build/80754af9/chardet_1607706746162/work
-charset-normalizer==2.0.4
 click==7.1.2
 conda==4.10.1
 conda-build==3.20.5
 conda-package-handling @ file:///tmp/build/80754af9/conda-package-handling_1618262148928/work
 conda-verify==3.4.2
-cryptography @ file:///tmp/build/80754af9/cryptography_1616769286105/work
-cycler==0.10.0
-cymem==2.0.5
-decorator @ file:///tmp/build/80754af9/decorator_1621259047763/work
-defusedxml @ file:///tmp/build/80754af9/defusedxml_1615228127516/work
 distlib==0.3.1
 Django==3.2.5
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0-py3-none-any.whl
-entrypoints==0.3
-et-xmlfile==1.1.0
-filelock @ file:///home/linux1/recipes/ci/filelock_1610993975404/work
 flasgger==0.9.5
 Flask==2.0.1
 Flask-Cors==3.0.10
 flask-googlemaps==0.4.1
 Flask-WTF==0.15.1
-flatbuffers==1.12
-future==0.18.2
-gast==0.4.0
 gensim==4.0.1
-ghp-import==2.0.1
-gitdb==4.0.7
-GitPython==3.1.18
-glob2 @ file:///home/linux1/recipes/ci/glob2_1610991677669/work
-google-auth==1.32.0
-google-auth-oauthlib==0.4.4
-google-pasta==0.2.0
-grpcio==1.34.1
-gTTS==2.2.2
 gunicorn==20.1.0
 h5py==3.1.0
 htmlmin==0.1.12
-idna @ file:///home/linux1/recipes/ci/idna_1610986105248/work
 importlib-metadata==4.6.3
 ipykernel @ file:///tmp/build/80754af9/ipykernel_1596207638929/work/dist/ipykernel-5.3.4-py3-none-any.whl
 ipython @ file:///tmp/build/80754af9/ipython_1617120885885/work
