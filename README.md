@@ -1,16 +1,16 @@
-**A. Topic:** 
+# A. Topic: 
 
 Predicting Market Volatility and building short-term trading strategies using data from Reddit's WallStreetBets. 
 
 
 
-**B. Short Description:**
+# B. Short Description:
 
 The aim of this project is to use data from posts made on the sub-reddit 'WallStreetBets' to make a prediction on stock prices and market volatility. Various features were extracted from these posts and a learning model was trained to predict if specific stocks rose or fell in the given timeframe.
 
 
 
-**C. Content:**
+# C. Content:
 ##
 	1. Project Approach
 	2. What does the DATA tell us?
@@ -20,7 +20,7 @@ The aim of this project is to use data from posts made on the sub-reddit 'WallSt
 
 
 
-**E. Data Collection:**
+# E. Data Collection:
 
 As per project requirement, the data from the news portals or social media sites which has lot of stock enthusiast, Customers, Investors, Companies and so on is needed. So, the data from Reddit’s WallStreetBets can be used. For this project, two different datasets will be used.
 
@@ -51,7 +51,7 @@ We’ll also create the target variable using open and close value. Where our co
 
 
 
-**F. Data Cleaning:**
+# F. Data Cleaning:
 
 First we’ll perform Sentiment Analysis in the body column that we had received fromJSON file. From where we’ll get the ‘Positive’, ‘Negative’ and 	‘Neutral’ value. Then we’ll merge this values with previously trimmed CSV files on the basis of Date. Hence, after which we’ll perform data cleaning involving following steps:
 ##
@@ -62,7 +62,7 @@ First we’ll perform Sentiment Analysis in the body column that we had received
 
 
 
-**G. Create Target variable:**
+# G. Create Target variable:
 
 ![alt text](https://github.com/bidhyapokharel/Predict-Market-Volatility/blob/master/Documentation-Report/targetcountplot.png)
 
@@ -74,13 +74,13 @@ Creating a target variable where :
   
   
 
-**Approach:**
+# H. Approach:
 
 ![alt text](https://github.com/bidhyapokharel/Predict-Market-Volatility/blob/master/Documentation-Report/approach.png)
 
 
 
-**H. Data Exploration:**
+# I. Data Exploration:
 
 After getting the data cleaned, exploration of data is necessary to understand the patterns in
 data or to retrieve useful insights/relation.
@@ -223,7 +223,7 @@ model. Feature Engineering was done using ExtraTreesRegressor.
     vi. Content Polarity/ Sentiment analysis
 
 
-**Model Building/Training:**
+# J. Model Building/Training:
 Logistic Regression was selected for a model.
 
 	!pip install logisticregression
@@ -250,7 +250,7 @@ Logistic Regression was selected for a model.
 
 
 
-**I. Performance Evaluation:**
+# K. Performance Evaluation:
      
 1. Confusion Matrix
 
@@ -275,7 +275,7 @@ Logistic Regression was selected for a model.
 	And also our accuracy score for model is not that good so let's try some Hyperparameter tuning.
 
 
-**J. Hyperparmeter Tuning**
+# L. Hyperparmeter Tuning
 
 There are various different methods for Hyperparameter Tuning But we don't have that great number of independent features so we'll choose GridSearchCV for hyperparameter tuning for our model. 
 
@@ -330,7 +330,7 @@ There are various different methods for Hyperparameter Tuning But we don't have 
 	
 										
 
-**K. Model Deployment:**
+# M. Model Deployment:
 Tools:  Flask, HTML,CSS, Heroku 
 
 ![alt text](https://github.com/bidhyapokharel/Predict-Market-Volatility/blob/master/Documentation-Report/Deploy1.png)
@@ -346,7 +346,7 @@ Tools:  Flask, HTML,CSS, Heroku
 
 
 
-**L. Model Conclusion:**
+# N. Model Conclusion:
 
   Conditions which have the following characteristics:
   a. Having HIGH opening price itself;
@@ -357,7 +357,7 @@ Tools:  Flask, HTML,CSS, Heroku
   
   
   
-**M. What can we do?**
+# O. What can we do?
 
 1.  Publish more Positive Contents ;
 2. Promote more detailed and informative contents
@@ -365,7 +365,7 @@ Tools:  Flask, HTML,CSS, Heroku
 
 
 
-**N. Limitations and Next Step:**
+# P. Limitations and Next Step:
 
 1. Only applied Logistic Regression:
    Apply and compare other tuned performance.
