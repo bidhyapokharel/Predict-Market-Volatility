@@ -21,6 +21,7 @@ keras-nightly==2.5.0.dev2021032900
 Keras-Preprocessing==1.1.2
 kiwisolver==1.3.1
 Markdown==3.3.4
+MarkupSafe==2.0.1
 matplotlib==3.4.2
 mergedeep==1.3.4
 mistune==0.8.4
@@ -28,7 +29,6 @@ mkdocs==1.2.2
 mkdocs-material==5.5.14
 mkdocs-material-extensions==1.0.1
 mkdocs-minify-plugin==0.3.0
-mod-wsgi==4.7.1
 module==0.0.4
 msgpack==1.0.2
 msgpack-python==0.5.6
