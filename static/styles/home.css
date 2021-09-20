@@ -1,0 +1,73 @@
+body {
+    background-color:#9aaba8;
+    text-align: center;
+    animation-name: colorchange;
+    animation-duration: 14s;
+}
+
+@keyframes colorchange {
+  0%   {background-color:#424d4b;}
+  25%  {background-color:#657572;}
+  50%  {background-color:#9aaba8;}
+  100% {background-color: #bcccc9;}
+}
+
+.navbar {
+    color: #8a450c;
+    padding: 2.6rem 1rem;  
+    text-align:center;
+    margin-bottom:0.4rem;
+}
+
+.navbar-brand{
+    text-align:center;
+    font-size:1.88rem;
+    font-weight:600;
+}
+
+.container-fluid{
+    justify-content: space-around !important;
+}
+
+a {
+    color: #f1f9f9;
+}
+
+a:hover {
+    color: #f0f0f0;
+  }
+
+.card{
+    height: 8rem;
+    border-color:#9aaba8;
+    border-radius:2.8rem;
+    text-align:center;
+}
+
+.card-title{
+    color: #8a450c;
+}
+
+.btn-secondary{
+    color:#fff;
+    background-color: #8a450c;
+    width:16rem ;
+    height:4rem;
+    font-size:2rem;
+    border-radius:1rem;
+}
+
+.btn-secondary:hover{
+    background-color: #3ca832;
+}
+
+
+.green{
+    text-color:green;
+}
+
+#polarity{
+    height:1.8rem;
+    width:12rem;
+    text-align:center;
+}
