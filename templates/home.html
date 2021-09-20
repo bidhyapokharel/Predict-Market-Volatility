@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicting Market Volatility</title>
+    
+     <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/styles/home.css">
+    
+</head>
+
+<body>
+ <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Predicting Market Volatility 
+                and building short-term trading strategies using data  
+                <br>
+                from Reddit's WallStreetBets</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+    
+         <form action="\predict" method="post">
+             
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Date</h5>
+                            <!-- Date -->
+                            <input type="datetime-local" name="date" id="date" required="required">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                         <!-- Sentiment Analysis-->
+                            <h5 class="card-title">Sentiment Analysis (Polarity)</h5>
+                            <select name="polarity" id="polarity" required="required">
+                                <option value="positive">Positive</option>
+                                <option value="negative">Negative</option>
+                                <option value="neutral">Neutral</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                        <!-- Opening price (Today) -->
+                            <h5 class="card-title">Open</h5>
+                            <input type="number" min="0.00" step="0.01" name="open" id="open" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">  </h5>
+                             <!-- Closing price (Yesterday)-->
+                            <h5 class="card-title">Close</h5>
+                            <input type="number" min="0.00" step="0.01" name="close" id="close" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <br>
+            <br>
+            <br>
+            
+             <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                        <!-- High -->
+                            <h5 class="card-title">Highest Price</h5>
+                            <input type="number" min="0.00" step="0.01" name="high" id="high" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">  </h5>
+                             <!-- Low -->
+                            <h5 class="card-title">Lowest Price</h5>
+                            <input type="number" min="0.00" step="0.01" name="low" id="low" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+             <br>
+            <br>
+            <br>
+            
+             <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                        <!-- High -->
+                            <h5 class="card-title">Content Length</h5>
+                            <input type="number" min="0.00" name="cont_len" id="cont_len" required="required">
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                        <!-- Volume -->
+                            <h5 class="card-title">Volume</h5>
+                            <input type="number" min="0.00" name="vol" id="vol" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            
+             
+            
+            <br>
+            <br>
+            <br>
+            <!-- Submit -->
+            <input type="submit" value="Submit" class="btn btn-secondary">
+            
+             <br>
+            <br>
+            
+            <h3 >{{ prediction_text }}</h3>
+
+            <br>
+            <br>
+            <p>©2021 Bidhya Pokharel</p>      
+         </form>
+         
+    </div>
+    <br><br><br>
+
+  <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
