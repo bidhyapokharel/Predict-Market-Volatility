@@ -17,28 +17,30 @@ The aim of this project is to use data from posts made on the sub-reddit 'WallSt
 
 
 **Data Collection:**
+
 As per project requirement, the data from the news portals or social media sites which has
 lot of stock enthusiast, Customers, Investors, Companies and so on is needed. So, the data
 from Reddit’s WallStreetBets can be used. For this project, two different datasets will be
 used.
+
 a. SPX file which contains lot of ‘High’, ‘Low’, ‘Close’, ‘Open’, ‘Volume’, so we’ll trim it
 out as per the Kaggle file named SP500. Hence from this file we’ll get four columns:
-i. Open
-ii. Close
-iii. High
-iv. Low
-v. Volume
-vi. Date
+	i. Open
+	ii. Close
+	iii. High
+	iv. Low
+	v. Volume
+	vi. Date
 
 
 ![alt text](https://github.com/bidhyapokharel/Predict-Market-Volatility/blob/master/Documentation-Report/sent.png)
 
 
-b. JSON file that contains the body of WSB post. Since, this file is very large we’ll take out
-only
-i. Body
-ii. Date
-iii. Score
+b. JSON file that contains the body of WSB post. Since, this file is very large we’ll take out only.
+	i. Body
+	ii. Date
+	iii. Score
+	
 We’ll also create the target variable using open and close value. Where our condition will
 be, if yesterday’s closing price is smaller than today’s closing price then our value will be 1
 similiarly vice versa.
@@ -107,7 +109,7 @@ methods like:
 ![alt text](https://github.com/bidhyapokharel/Predict-Market-Volatility/blob/master/Documentation-Report/UniCountplot.png)
 
 ## Summary:
-As expected from above calculation our positive sentimental analysis is more in comparison to neutral and negative sentimental analysis.
+	As expected from above calculation our positive sentimental analysis is more in comparison to neutral and negative sentimental analysis.
 
 
 3. Bivariate Countplot
@@ -116,9 +118,9 @@ As expected from above calculation our positive sentimental analysis is more in 
 
 ## Summary
 
-1. Most of the positive sentiment analysis has target variable 1(Profit) but not 0 (Loss).
-2. All the neutral snetiment analysis has target varaible 1 i.e. has led to profit.
-3. Negative sentiment analysis equally has target variable 0 (Loss) and 1 (Profit).
+	1. Most of the positive sentiment analysis has target variable 1(Profit) but not 0 (Loss).
+	2. All the neutral snetiment analysis has target varaible 1 i.e. has led to profit.
+	3. Negative sentiment analysis equally has target variable 0 (Loss) and 1 (Profit).
 
 
 4. Distribution plot
@@ -173,8 +175,8 @@ As expected from above calculation our positive sentimental analysis is more in 
 
 ## Summary:
 
-1. All the value of Open, Close, High and Close are increased as per the time.
-2. But Volume keeps on changing in between.
+	1. All the value of Open, Close, High and Close are increased as per the time.
+	2. But Volume keeps on changing in between.
 
 
 
@@ -184,19 +186,18 @@ As expected from above calculation our positive sentimental analysis is more in 
 ![alt text](https://github.com/bidhyapokharel/Predict-Market-Volatility/blob/master/Documentation-Report/BiLineplot.png)
 
 # Summary
-Seems like Content polarity and close value are correlated to each other.
+	Seems like Content polarity and close value are correlated to each other.
 
-1. As per the graph, close price is increasing as per the year.
-2. If the content polarity is higher, then there is higher chance of getting more closing price.
+	1. As per the graph, close price is increasing as per the year.
+	2. If the content polarity is higher, then there is higher chance of getting more closing price.
 
 
 
 8. Heatmap
 
    ![alt text](https://github.com/bidhyapokharel/Predict-Market-Volatility/blob/master/Documentation-Report/Heatmap.png)
-   
-   
-   ### Summary of Heatmap:
+ 
+ ## Summary of Heatmap:
 
     i. Target variable is highly correlated to 'Volume', 'Closing price', 'Opening price', 'Comment length'  
     and 'Content Polarity' (Sentiment Analysis).
@@ -207,6 +208,7 @@ Seems like Content polarity and close value are correlated to each other.
 
 
 b. Feature Engineering:
+
 We can encode our categorical data if necessary using different classifiers/labels like
 Label Encoder, Binary encoder and so on. We will also find the important features for our
 model. Feature Engineering was done using ExtraTreesRegressor.
@@ -215,7 +217,7 @@ model. Feature Engineering was done using ExtraTreesRegressor.
 
 
 ## Summary of Feature Engineering
-So, basically we can say, Our target variable is highly related to:
+	So, basically we can say, Our target variable is highly related to:
 
     i. Volume
     ii. Opening Price
@@ -228,18 +230,20 @@ So, basically we can say, Our target variable is highly related to:
 **Model Building/Training:**
 Logistic Regression was selected for a model.
 
-!pip install logisticregression
-from sklearn.learn_model import LogisticRegression
-from sklearn.metrics import classification_report, accuracy_score
-log_reg = LogisticRegression
-log_reg.fit(x_train, y_train)
+	!pip install logisticregression
+	
+	from sklearn.learn_model import LogisticRegression
+	from sklearn.metrics import classification_report, accuracy_score
+	
+	log_reg = LogisticRegression
+	log_reg.fit(x_train, y_train)
 
-y_pred = log_reg.predict(X_test)
-print(classification_report(y_test, y_pred))
+	y_pred = log_reg.predict(X_test)
+	print(classification_report(y_test, y_pred))
 
-acc_score = accuracy_score(y_test,y_pred)
-acc_score_per = acc_score * 100
-print(‘The accuracy score is’, acc_score, ‘/’, acc_score_per, ‘%’.)
+	acc_score = accuracy_score(y_test,y_pred)
+	acc_score_per = acc_score * 100
+	print(‘The accuracy score is’, acc_score, ‘/’, acc_score_per, ‘%’.)
 
 
 
@@ -258,10 +262,10 @@ print(‘The accuracy score is’, acc_score, ‘/’, acc_score_per, ‘%’.)
 
 
 ## Summary
-True Negative: 69 (Predicted Loss as Loss)
-False Positive: 92 (Predicted Loss as Profit)
-False Negative: 14 (Predicted Profit as Loss)
-True Positive: 153  (Predicted Profit as Profit)
+	True Negative: 69 (Predicted Loss as Loss)
+	False Positive: 92 (Predicted Loss as Profit)
+	False Negative: 14 (Predicted Profit as Loss)
+	True Positive: 153  (Predicted Profit as Profit)
 
 
 
@@ -270,33 +274,28 @@ True Positive: 153  (Predicted Profit as Profit)
 ![alt text](https://github.com/bidhyapokharel/Predict-Market-Volatility/blob/master/Documentation-Report/RocCURVE1.png)
 
 ## Summary:
-The left corner of our model is quite near to top-left corner but not exactly so the roc curve of our model is average.
-In general AUC of 0.8-0.9 is considered good but above 0.9 is considered excellent.
-And also our accuracy score for model is not that good so let's try some Hyperparameter tuning.
+	The left corner of our model is quite near to top-left corner but not exactly so the roc curve of our model is average.
+	In general AUC of 0.8-0.9 is considered good but above 0.9 is considered excellent.
+	And also our accuracy score for model is not that good so let's try some Hyperparameter tuning.
 
 
 **Hyperparmeter Tuning**
+
 There are various different methods for Hyperparameter Tuning But we don't have that great number of independent features so we'll choose GridSearchCV for hyperparameter tuning for our model. 
-Most of the variables in algorithms cannot be changed (parameters) but we can change few parameterss (Hyperparameters) to tune our Logistic Regression model like:
-    1. estimator: In this we have to pass the models or functions on which we want to use GridSearchCV
-    2. param_grid: Dictionary or list of parameters of models or function in which GridSearchCV have to select the best.
-    3. Scoring: It is used as a evaluating metric for the model performance to decide the best hyperparameters, if not especified then it uses estimator score.
-    4. cv : In this we have to pass a interger value, as it signifies the number of splits that is needed for cross validation. By default is set as five.
-    5. n_jobs : This signifies the number of jobs to be run in parallel, -1 signifies to use all processor.
 
-Code:
-from sklearn.model_selection import GridSearchCV
+## Code:
+	from sklearn.model_selection import GridSearchCV
 
-penalty=['l1', 'l2', 'elasticnet']
-solver=['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga']
-max_iter=[100,200,300,350]
+	penalty=['l1', 'l2', 'elasticnet']
+	solver=['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga']
+	max_iter=[100,200,300,350]
 
-random_grid={'penalty':penalty,
+	random_grid={'penalty':penalty,
              'solver':solver,
              'max_iter':max_iter,
              }
 
-log_reg_grid_search= GridSearchCV(estimator=log_reg, param_grid=random_grid, cv=20, n_jobs=-1, verbose=2)
+	log_reg_grid_search= GridSearchCV(estimator=log_reg, param_grid=random_grid, cv=20, n_jobs=-1, verbose=2)
 
 
 1. Confusion Matrix(After Hyperparameter Tuning)
@@ -304,10 +303,10 @@ log_reg_grid_search= GridSearchCV(estimator=log_reg, param_grid=random_grid, cv=
 ![alt text](https://github.com/bidhyapokharel/Predict-Market-Volatility/blob/master/Documentation-Report/CONMATRIX2.png)
 
 ## Summary:
-True Negative: 148 (Predicted Loss as Loss)
-False Positive: 13 (Predicted Loss as Profit)
-False Negative: 7  (Predicted Profit as Loss)
-True Positive: 160  (Predicted Profit as Profit)
+	True Negative: 148 (Predicted Loss as Loss)
+	False Positive: 13 (Predicted Loss as Profit)
+	False Negative: 7  (Predicted Profit as Loss)
+	True Positive: 160  (Predicted Profit as Profit)
 
 
 
@@ -317,9 +316,9 @@ True Positive: 160  (Predicted Profit as Profit)
 
 
 ## Summary:
-1. The AUC score is  0.98988358686354 / 98.988358686354 % (AUC value about 0.9 is considered outstanding). Hence 
-model has satisfying AUC score.
-2. From the curve also we can see, the line is so close to top-left corner. Hence, our model is really good.
+	1. The AUC score is  0.98988358686354 / 98.988358686354 % (AUC value about 0.9 is considered outstanding). Hence 
+	model has satisfying AUC score.
+	2. From the curve also we can see, the line is so close to top-left corner. Hence, our model is really good.
 
 
 3. Classification Report and Accuracy score of our model (After Hyperparameter Tuning)
@@ -328,10 +327,10 @@ model has satisfying AUC score.
 
 ## Summary:
 
-Accuracy score:
-Before Hyperparameter tuning: 0.6798780487804879 / 67.98780487804879 %.
-After Hyperparameter tunign: 0.9390243902439024 / 93.90243902439023 %.
-Hence, we can see how our accuracy has gradually changed after Hyperparameter tuning. 
+	Accuracy score:
+	Before Hyperparameter tuning: 0.6798780487804879 / 67.98780487804879 %.
+	After Hyperparameter tunign: 0.9390243902439024 / 93.90243902439023 %.
+	Hence, we can see how our accuracy has gradually changed after Hyperparameter tuning. 
 	
 										
 
@@ -340,18 +339,19 @@ Tools:  Flask, HTML,CSS, Heroku
 
 ![alt text](https://github.com/bidhyapokharel/Predict-Market-Volatility/blob/master/Documentation-Report/Deploy1.png)
 
-Input
-Date, Sentiment Analysis, Open, Close, Higher Price, Lower Price, Content Length, Close
+	Input:
+	Date, Sentiment Analysis, Open, Close, Higher Price, Lower Price, Content Length, Close
 
 
 ![alt text](https://github.com/bidhyapokharel/Predict-Market-Volatility/blob/master/Documentation-Report/deployresult.png)
 
-Output
-Gives the predicted output from the trained model in the form of Profit/Loss.
+	Output:
+	Gives the predicted output from the trained model in the form of Profit/Loss.
 
 
 
 **Model Conclusion:**
+
   Conditions which have the following characteristics:
   a. Having HIGH opening price itself;
   b. High Volume;
@@ -370,6 +370,7 @@ Gives the predicted output from the trained model in the form of Profit/Loss.
 
 
 **Limitations and Next Step:**
+
 1. Only applied Logistic Regression:
    Apply and compare other tuned performance.
 
