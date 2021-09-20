@@ -1,9 +1,5 @@
 certifi==2021.5.30
 click==7.1.2
-conda==4.10.1
-conda-build==3.20.5
-conda-package-handling @ file:///tmp/build/80754af9/conda-package-handling_1618262148928/work
-conda-verify==3.4.2
 distlib==0.3.1
 Django==3.2.5
 flasgger==0.9.5
