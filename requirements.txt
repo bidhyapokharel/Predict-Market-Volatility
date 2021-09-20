@@ -11,7 +11,6 @@ gensim==4.0.1
 gunicorn==20.1.0
 h5py==3.1.0
 htmlmin==0.1.12
-importlib-metadata==4.6.3
 ipykernel @ file:///tmp/build/80754af9/ipykernel_1596207638929/work/dist/ipykernel-5.3.4-py3-none-any.whl
 ipython @ file:///tmp/build/80754af9/ipython_1617120885885/work
 ipython-genutils @ file:///tmp/build/80754af9/ipython_genutils_1606773439826/work
