@@ -1,5 +1,4 @@
 anyio @ file:///tmp/build/80754af9/anyio_1617783275907/work/dist
-app==0.0.1
 appdirs==1.4.4
 argon2-cffi @ file:///tmp/build/80754af9/argon2-cffi_1613037097816/work
 asgiref==3.4.1
