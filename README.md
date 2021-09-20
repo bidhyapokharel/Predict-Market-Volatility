@@ -1,30 +1,31 @@
-( Predicting Market Volatility and building short-term trading strategies using data from Reddit's WallStreetBets. )
+**A. Topic:** 
+
+Predicting Market Volatility and building short-term trading strategies using data from Reddit's WallStreetBets. 
 
 
 
-**Short Description:**
+**B. Short Description:**
+
 The aim of this project is to use data from posts made on the sub-reddit 'WallStreetBets' to make a prediction on stock prices and market volatility. Various features were extracted from these posts and a learning model was trained to predict if specific stocks rose or fell in the given timeframe.
 
 
 
-**Content:**
-1. Project Approach
-2. What does the DATA tell us?
-3. Our PREDICTION models
-4. PERFORMANCE evaluate
-5. CONCLUSION & NEXT STEP
+**C. Content:**
+##
+	1. Project Approach
+	2. What does the DATA tell us?
+	3. Our PREDICTION models
+	4. PERFORMANCE evaluate
+	5. CONCLUSION & NEXT STEP
 
 
 
-**Data Collection:**
+**E. Data Collection:**
 
-As per project requirement, the data from the news portals or social media sites which has
-lot of stock enthusiast, Customers, Investors, Companies and so on is needed. So, the data
-from Reddit’s WallStreetBets can be used. For this project, two different datasets will be
-used.
+As per project requirement, the data from the news portals or social media sites which has lot of stock enthusiast, Customers, Investors, Companies and so on is needed. So, the data from Reddit’s WallStreetBets can be used. For this project, two different datasets will be used.
 
-a. SPX file which contains lot of ‘High’, ‘Low’, ‘Close’, ‘Open’, ‘Volume’, so we’ll trim it
-out as per the Kaggle file named SP500. Hence from this file we’ll get four columns:
+a. SPX file which contains lot of ‘High’, ‘Low’, ‘Close’, ‘Open’, ‘Volume’, so we’ll trim it out as per the Kaggle file named SP500. Hence from this file we’ll get four columns:
+##
 	i. Open
 	ii. Close
 	iii. High
@@ -37,13 +38,12 @@ out as per the Kaggle file named SP500. Hence from this file we’ll get four co
 
 
 b. JSON file that contains the body of WSB post. Since, this file is very large we’ll take out only.
+##
 	i. Body
 	ii. Date
 	iii. Score
 	
-We’ll also create the target variable using open and close value. Where our condition will
-be, if yesterday’s closing price is smaller than today’s closing price then our value will be 1
-similiarly vice versa.
+We’ll also create the target variable using open and close value. Where our condition willbe, if yesterday’s closing price is smaller than today’s closing price then our value will be 1 similiarly vice versa.
 
 
 ![alt text](https://github.com/bidhyapokharel/Predict-Market-Volatility/blob/master/Documentation-Report/csvdata.png)
@@ -51,20 +51,18 @@ similiarly vice versa.
 
 
 
-**Data Cleaning:**
+**F. Data Cleaning:**
 
-First we’ll perform Sentiment Analysis in the body column that we had received from
-JSON file. From where we’ll get the ‘Positive’, ‘Negative’ and ‘Neutral’ value. Then we’ll
-merge this values with previously trimmed CSV files on the basis of Date. Hence, after
-which we’ll perform data cleaning involving following steps:
-i. Impute/Remove missing values or Null values (NaN)
-ii. Remove unnecessary and corrupted data.
-iii. Date/Text parsing if required.
+First we’ll perform Sentiment Analysis in the body column that we had received fromJSON file. From where we’ll get the ‘Positive’, ‘Negative’ and 	‘Neutral’ value. Then we’ll merge this values with previously trimmed CSV files on the basis of Date. Hence, after which we’ll perform data cleaning involving following steps:
+##
+	i. Impute/Remove missing values or Null values (NaN)
+	ii. Remove unnecessary and corrupted data.
+	iii. Date/Text parsing if required.
 
 
 
 
-**Create Target variable:**
+**G. Create Target variable:**
 
 ![alt text](https://github.com/bidhyapokharel/Predict-Market-Volatility/blob/master/Documentation-Report/targetcountplot.png)
 
@@ -82,16 +80,14 @@ Creating a target variable where :
 
 
 
-**Data Exploration:**
+**H. Data Exploration:**
 
 After getting the data cleaned, exploration of data is necessary to understand the patterns in
 data or to retrieve useful insights/relation.
 
 *a. Exploratory Data Analytics (EDA):*
 
-We can find the correlation among the dependent and independent features so that we
-can explore which feature is more important (Feature Selection Method) via different
-methods like:
+We can find the correlation among the dependent and independent features so that we can explore which feature is more important (Feature Selection Method) via different methods like:
 
 1. Bi-varaite Barplot
 
@@ -129,10 +125,10 @@ methods like:
 
 ## Summary
 
-1. All our variables are normally distributed.
-2. But there seems to be quite a outlier in the data. 
-3. Before exploring other plot. Let's deal with ourliers first.
-4. We're going to confirm outliers with Boxplot.
+	1. All our variables are normally distributed.
+	2. But there seems to be quite a outlier in the data. 
+	3. Before exploring other plot. Let's deal with ourliers first.
+	4. We're going to confirm outliers with Boxplot.
 
 
 
@@ -254,7 +250,7 @@ Logistic Regression was selected for a model.
 
 
 
-**Performance Evaluation:**
+**I. Performance Evaluation:**
      
 1. Confusion Matrix
 
@@ -279,7 +275,7 @@ Logistic Regression was selected for a model.
 	And also our accuracy score for model is not that good so let's try some Hyperparameter tuning.
 
 
-**Hyperparmeter Tuning**
+**J. Hyperparmeter Tuning**
 
 There are various different methods for Hyperparameter Tuning But we don't have that great number of independent features so we'll choose GridSearchCV for hyperparameter tuning for our model. 
 
@@ -334,7 +330,7 @@ There are various different methods for Hyperparameter Tuning But we don't have 
 	
 										
 
-**Model Deployment:**
+**K. Model Deployment:**
 Tools:  Flask, HTML,CSS, Heroku 
 
 ![alt text](https://github.com/bidhyapokharel/Predict-Market-Volatility/blob/master/Documentation-Report/Deploy1.png)
@@ -350,7 +346,7 @@ Tools:  Flask, HTML,CSS, Heroku
 
 
 
-**Model Conclusion:**
+**L. Model Conclusion:**
 
   Conditions which have the following characteristics:
   a. Having HIGH opening price itself;
@@ -361,7 +357,7 @@ Tools:  Flask, HTML,CSS, Heroku
   
   
   
-**What can we do?**
+**M. What can we do?**
 
 1.  Publish more Positive Contents ;
 2. Promote more detailed and informative contents
@@ -369,7 +365,7 @@ Tools:  Flask, HTML,CSS, Heroku
 
 
 
-**Limitations and Next Step:**
+**N. Limitations and Next Step:**
 
 1. Only applied Logistic Regression:
    Apply and compare other tuned performance.
