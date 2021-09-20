@@ -11,7 +11,6 @@ The aim of this project is to use data from posts made on the sub-reddit 'WallSt
 
 
 # C. Content:
-##
 	1. Project Approach
 	2. What does the DATA tell us?
 	3. Our PREDICTION models
