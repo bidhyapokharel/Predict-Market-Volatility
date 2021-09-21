@@ -21,6 +21,9 @@ The aim of this project is to use data from posts made on the sub-reddit 'WallSt
 
 # E. Data Collection:
 
+## Link to raw data(Huge JSON and Excel fiel):
+	https://drive.google.com/drive/u/3/folders/1dH0Zuw5Gld2jqEcECsN-13YOz6qAGby5
+	
 As per project requirement, the data from the news portals or social media sites which has lot of stock enthusiast, Customers, Investors, Companies and so on is needed. So, the data from Reddit’s WallStreetBets can be used. For this project, two different datasets will be used.
 
 a. SPX file which contains lot of ‘High’, ‘Low’, ‘Close’, ‘Open’, ‘Volume’, so we’ll trim it out as per the Kaggle file named SP500. Hence from this file we’ll get four columns:
